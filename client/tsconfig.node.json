@@ -11,8 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/widgets/*": ["./src/widgets/*"],
-    },
+      "@/widgets/*": ["./src/widgets/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }

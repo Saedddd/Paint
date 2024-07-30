@@ -1,14 +1,13 @@
-
-import './App.css'
+import Canvas from "@/widgets/Canvas";
+import "./App.css";
 
 function App() {
-
-
   return (
     <>
-      <button className='btn'>gkidsihgoi</button>
+      <button className="btn">gkidsihgoi</button>
+      <Canvas />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
