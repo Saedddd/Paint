@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       "@": "/src",
       "@widgets": "/src/widgets",
+      "@shared": "/src/shared",
     },
   },
 });
