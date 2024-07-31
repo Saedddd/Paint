@@ -34,7 +34,7 @@ const ToolBar: React.FC = () => {
             <Palette />
           </button>
         </div>
-        <div className="flex gap-4">
+        <div className="flex">
           <button className="btn btn-ghost">
             <Undo />
           </button>
