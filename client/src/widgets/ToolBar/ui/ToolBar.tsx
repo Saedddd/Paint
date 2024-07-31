@@ -4,7 +4,6 @@ import Brush from "@/shared/icons/Brush";
 import Circle from "@/shared/icons/Circle";
 import Eraser from "@/shared/icons/Eraser";
 import Line from "@/shared/icons/Line";
-import Palette from "@/shared/icons/Palette";
 import Rect from "@/shared/icons/Rect";
 import Undo from "@/shared/icons/Undo";
 import Redo from "@/shared/icons/Redo";
@@ -14,7 +13,7 @@ const ToolBar: React.FC = () => {
   return (
     <section className="h-12 bg-slate-500 drop-shadow-xl shadow-xl">
       <div className="flex justify-between m-auto items-center max-w-6xl">
-        <div className="flex">
+        <div className="flex items-center">
           <button className="btn btn-ghost">
             <Brush />
           </button>
@@ -30,9 +29,7 @@ const ToolBar: React.FC = () => {
           <button className="btn btn-ghost">
             <Line />
           </button>
-          <button className="btn btn-ghost">
-            <Palette />
-          </button>
+          <input className="w-12 h-10  text-base bg-transparent border-none cursor-pointer" type="color" />
         </div>
         <div className="flex">
           <button className="btn btn-ghost">
