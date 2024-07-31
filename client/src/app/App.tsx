@@ -1,13 +1,9 @@
-import Canvas from "@/widgets/Canvas";
-import "./App.css";
-import Brush from "@/shared/icons/Brush";
+import ToolBar from "@/widgets/ToolBar";
 
 function App() {
   return (
     <>
-      <button className="btn">gkidsihgoi</button>
-      <Canvas />
-      <Brush />
+      <ToolBar />
     </>
   );
 }
