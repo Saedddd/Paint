@@ -1,7 +1,8 @@
+import Tool from "@/features/Tools/Tool";
 import { makeObservable, observable, action } from "mobx";
 
 class ToolState {
-  tool: string | null = null;
+  tool: Tool | null = null;
   constructor() {
     makeObservable(this, {
       tool: observable,
@@ -9,7 +10,7 @@ class ToolState {
     });
   }
 
-  setTool(tool: string) {
+  setTool(tool: Tool | null) {
     this.tool = tool;
   }
 }
