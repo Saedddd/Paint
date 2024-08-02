@@ -12,6 +12,7 @@ import Save from "@/shared/icons/Save";
 import ToolState from "@/shared/library/mobx/store/ToolState";
 import BrushTool from "@/features/Tools/BrushTool";
 import CanvasState from "@/shared/library/mobx/store/CanvasState";
+import RectTool from "@/features/Tools/RectTool";
 
 const ToolBar: React.FC = () => {
   return (
@@ -24,7 +25,10 @@ const ToolBar: React.FC = () => {
           >
             <Brush />
           </button>
-          <button className="btn btn-ghost">
+          <button
+            className="btn btn-ghost"
+            onClick={() => ToolState.setTool(CanvasState.canvas ? new RectTool(CanvasState.canvas) : null)}
+          >
             <Rect />
           </button>
           <button className="btn btn-ghost">
