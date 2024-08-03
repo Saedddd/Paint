@@ -15,6 +15,7 @@ import BrushTool from "@/features/Tools/BrushTool";
 import RectTool from "@/features/Tools/RectTool";
 import CircleTool from "@/features/Tools/CircleTool";
 import EraserTool from "@/features/Tools/EraserTool";
+import LineTool from "@/features/Tools/LineTool";
 
 const ToolBar: React.FC = () => {
   return (
@@ -45,7 +46,10 @@ const ToolBar: React.FC = () => {
           >
             <Eraser />
           </button>
-          <button className="btn btn-ghost">
+          <button
+            className="btn btn-ghost"
+            onClick={() => ToolState.setTool(CanvasState.canvas ? new LineTool(CanvasState.canvas) : null)}
+          >
             <Line />
           </button>
           <input className="w-12 h-10  text-base bg-transparent border-none cursor-pointer" type="color" />
