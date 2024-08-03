@@ -14,6 +14,7 @@ import ToolState from "@/shared/library/mobx/store/ToolState";
 import BrushTool from "@/features/Tools/BrushTool";
 import RectTool from "@/features/Tools/RectTool";
 import CircleTool from "@/features/Tools/CircleTool";
+import EraserTool from "@/features/Tools/EraserTool";
 
 const ToolBar: React.FC = () => {
   return (
@@ -38,7 +39,10 @@ const ToolBar: React.FC = () => {
           >
             <Circle />
           </button>
-          <button className="btn btn-ghost">
+          <button
+            className="btn btn-ghost"
+            onClick={() => ToolState.setTool(CanvasState.canvas ? new EraserTool(CanvasState.canvas) : null)}
+          >
             <Eraser />
           </button>
           <button className="btn btn-ghost">
