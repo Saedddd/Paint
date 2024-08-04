@@ -52,7 +52,13 @@ const ToolBar: React.FC = () => {
           >
             <Line />
           </button>
-          <input className="w-12 h-10  text-base bg-transparent border-none cursor-pointer" type="color" />
+          <input
+            onChange={e => {
+              ToolState.setFillColor(e.target.value);
+            }}
+            className="w-12 h-10  text-base bg-transparent border-none cursor-pointer"
+            type="color"
+          />
         </div>
         <div className="flex">
           <button className="btn btn-ghost">

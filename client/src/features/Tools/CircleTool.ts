@@ -57,7 +57,6 @@ export default class CircleTool extends Tool {
       this.ctx?.beginPath();
       this.ctx?.arc(x, y, radius, 0, Math.PI * 2);
       this.ctx?.fill(); // Заполняем круг цветом (если требуется)
-      this.ctx?.stroke(); // Обводим круг
       this.ctx?.closePath();
     };
   }
