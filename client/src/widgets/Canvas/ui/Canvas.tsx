@@ -14,9 +14,19 @@ const Canvas: React.FC = observer(() => {
     }
   }, []);
 
+  const mouseDownHandler = () => {
+    CanvasState.pushToUndo(canvasRef.current ? canvasRef.current.toDataURL() : "");
+  };
+
   return (
     <section className="flex h-svh items-center justify-center">
-      <canvas ref={canvasRef} className="border-2 border-slate-950 bg-white" width={1000} height={700}></canvas>
+      <canvas
+        onMouseDown={() => mouseDownHandler()}
+        ref={canvasRef}
+        className="border-2 border-slate-950 bg-white"
+        width={1000}
+        height={700}
+      ></canvas>
     </section>
   );
 });
