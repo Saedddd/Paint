@@ -64,7 +64,7 @@ const ToolBar: React.FC = () => {
           <button onClick={() => CanvasState.undo()} className="btn btn-ghost">
             <Undo />
           </button>
-          <button className="btn btn-ghost">
+          <button onClick={() => CanvasState.redo()} className="btn btn-ghost">
             <Redo />
           </button>
           <button className="btn btn-ghost">
