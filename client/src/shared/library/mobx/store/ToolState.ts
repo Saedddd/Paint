@@ -11,7 +11,9 @@ class ToolState {
   }
 
   setTool(tool: Tool | null) {
-    this.tool = tool;
+    if(this.tool){
+      this.tool = tool;
+    }
   }
 
   setFillColor(color: string) {

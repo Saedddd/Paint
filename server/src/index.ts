@@ -9,13 +9,13 @@ interface Connect {
 }
 
 interface Message {
-    id: string; // Определяем структуру ожидаемого объекта msg
-    method: string; // Метод, который будет использоваться в switch-case
-    [key: string]: any; // Дополнительные поля
+    id: string;
+    method: string; 
+    [key: string]: any;
 }
 
 interface CustomWebSocket extends WebSocket {
-    id?: string; // Расширяем интерфейс WebSocket с добавлением поля id
+    id?: string; 
 }
 
 
@@ -35,7 +35,7 @@ app.ws('/', (ws, req) => {
             const message = typeof msg === 'string' ? msg : msg.toString();
             const messageObj: Message = JSON.parse(message);
             
-            // Проверка наличия метода
+       
             if (messageObj.method) {
                 switch (messageObj.method) {
                     case "connection":
@@ -63,7 +63,7 @@ const connectionHandler = ({ ws, msg }: Connect) => {
 const broadcastConnection = (ws: CustomWebSocket, msg: Message) => {
     aWss.clients.forEach(client => {
         const customClient = client as CustomWebSocket;
-        if (customClient.id !== ws.id) { // Отправляем сообщение всем клиентам, кроме самого отправителя
+        if (customClient.id !== ws.id) { 
             customClient.send(`User ${msg.username || 'Unknown'} is now connected`);
         }
     });
