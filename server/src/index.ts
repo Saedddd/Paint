@@ -3,9 +3,6 @@ import expressWs from "express-ws"
 import { Application } from 'express';
 import { WebSocket } from 'ws';
 
-
-
-
 interface Connect {
     ws: CustomWebSocket,
     msg: Message
